@@ -14,3 +14,11 @@ img {
 #ballDiv {
   height: 250px;
 }
+@media screen and (max-width: 640px) {
+  #textRow {
+    font-size: 20px;
+  }
+  img {
+    padding-left: 0px;
+  }
+}
