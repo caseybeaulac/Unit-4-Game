@@ -1,0 +1,16 @@
+body {
+  background-image: url(../images/background1.jpg);
+  font-family: myFont;
+  font-size: 30px;
+}
+@font-face {
+  font-family: myFont;
+  src: url(../images/PokemonSolid.ttf);
+}
+
+img {
+  width: 100px;
+}
+#ballDiv {
+  height: 250px;
+}

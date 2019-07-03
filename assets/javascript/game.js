@@ -2,6 +2,7 @@
 $(document).ready(function() {
   // initializing variables
   var score = 0;
+  var losses = 0;
   var yourNum = 0;
   var goalNum = 0;
   var pokeballNum = 0;
@@ -13,34 +14,25 @@ $(document).ready(function() {
     yourNum = 0;
     goalNum = 0;
     goalNum = Math.floor(Math.random() * 69 + 30);
-    pokeballNum = [Math.floor(Math.random() * 9) + 2];
-    greatballNum = [Math.floor(Math.random() * 9) + 2];
-    ultraballNum = [Math.floor(Math.random() * 9) + 2];
-    masterballNum = [Math.floor(Math.random() * 9) + 2];
+    pokeballNum = Math.floor(Math.random() * 9) + 2;
+    greatballNum = Math.floor(Math.random() * 9) + 2;
+    ultraballNum = Math.floor(Math.random() * 9) + 2;
+    masterballNum = Math.floor(Math.random() * 9) + 2;
     $("#randomNumDiv").text(goalNum);
     $("#yourNumDiv").text(yourNum);
-    console.log(pokeballNum);
-    console.log(greatballNum);
-    console.log(ultraballNum);
-    console.log(masterballNum);
   }
 
   goalNum = Math.floor(Math.random() * 69 + 30);
-  pokeballNum = [Math.floor(Math.random() * 9) + 2];
-  greatballNum = [Math.floor(Math.random() * 9) + 2];
-  ultraballNum = [Math.floor(Math.random() * 9) + 2];
-  masterballNum = [Math.floor(Math.random() * 9) + 2];
+  pokeballNum = Math.floor(Math.random() * 9) + 2;
+  greatballNum = Math.floor(Math.random() * 9) + 2;
+  ultraballNum = Math.floor(Math.random() * 9) + 2;
+  masterballNum = Math.floor(Math.random() * 9) + 2;
 
   // setting goal number to div and your number to div
   $("#randomNumDiv").text(goalNum);
   $("#yourNumDiv").text(yourNum);
   $("#winsDiv").text(score);
-  //generate numbers on different pokeballs
-
-  console.log(pokeballNum);
-  console.log(greatballNum);
-  console.log(ultraballNum);
-  console.log(masterballNum);
+  $("#LossesDiv").text(losses);
 
   $("#pokeball").text(pokeballNum);
   $("#greatball").text(greatballNum);
@@ -57,6 +49,7 @@ $(document).ready(function() {
       restartGame();
     } else if (yourNum > goalNum) {
       confirm("You lose! Play again?");
+      losses++;
       restartGame();
     }
   });
@@ -71,6 +64,7 @@ $(document).ready(function() {
       restartGame();
     } else if (yourNum > goalNum) {
       confirm("You lose! Play again?");
+      losses++;
       restartGame();
     }
   });
@@ -85,6 +79,7 @@ $(document).ready(function() {
       restartGame();
     } else if (yourNum > goalNum) {
       confirm("You lose! Play again?");
+      losses++;
       restartGame();
     }
   });
@@ -99,6 +94,7 @@ $(document).ready(function() {
       restartGame();
     } else if (yourNum > goalNum) {
       confirm("You lose! Play again?");
+      losses++;
       restartGame();
     }
   });
