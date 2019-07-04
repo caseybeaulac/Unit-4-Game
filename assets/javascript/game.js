@@ -32,7 +32,7 @@ $(document).ready(function() {
   $("#randomNumDiv").text(goalNum);
   $("#yourNumDiv").text(yourNum);
   $("#winsDiv").text(score);
-  $("#LossesDiv").text(losses);
+  $("#lossesDiv").text(losses);
 
   $("#pokeball").text(pokeballNum);
   $("#greatball").text(greatballNum);
@@ -43,13 +43,14 @@ $(document).ready(function() {
     yourNum = parseInt(yourNum) + parseInt(pokeballNum);
     $("#yourNumDiv").text(yourNum);
     if (yourNum === goalNum) {
-      confirm("You win! Play again?", true);
+      alert("You win!", true);
       score++;
       $("#winsDiv").text(score);
       restartGame();
     } else if (yourNum > goalNum) {
-      confirm("You lose! Play again?");
+      alert("You lose!");
       losses++;
+      $("#lossesDiv").text(losses);
       restartGame();
     }
   });
@@ -58,13 +59,15 @@ $(document).ready(function() {
     yourNum = parseInt(yourNum) + parseInt(greatballNum);
     $("#yourNumDiv").text(yourNum);
     if (yourNum === goalNum) {
-      confirm("You win! Play again?", true);
+      alert("You win!", true);
       score++;
       $("#winsDiv").text(score);
       restartGame();
     } else if (yourNum > goalNum) {
-      confirm("You lose! Play again?");
+      alert("You lose!");
       losses++;
+      $("#lossesDiv").text(losses);
+
       restartGame();
     }
   });
@@ -73,13 +76,14 @@ $(document).ready(function() {
     yourNum = parseInt(yourNum) + parseInt(ultraballNum);
     $("#yourNumDiv").text(yourNum);
     if (yourNum === goalNum) {
-      confirm("You win! Play again?", true);
+      alert("You win!", true);
       score++;
       $("#winsDiv").text(score);
       restartGame();
     } else if (yourNum > goalNum) {
-      confirm("You lose! Play again?");
+      alert("You lose!");
       losses++;
+      $("#lossesDiv").text(losses);
       restartGame();
     }
   });
@@ -88,13 +92,14 @@ $(document).ready(function() {
     yourNum = parseInt(yourNum) + parseInt(masterballNum);
     $("#yourNumDiv").text(yourNum);
     if (yourNum === goalNum) {
-      confirm("You win! Play again?", true);
+      alert("You win!", true);
       score++;
       $("#winsDiv").text(score);
       restartGame();
     } else if (yourNum > goalNum) {
-      confirm("You lose! Play again?");
+      alert("You lose!");
       losses++;
+      $("#lossesDiv").text(losses);
       restartGame();
     }
   });
